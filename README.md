@@ -2,24 +2,23 @@
 
 **Flixster** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Time spent: **X** hours spent in total
-            **2** hours spent so far...
+Time spent: **7** hours spent
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-* [ ] User can **scroll through current movies** from the Movie Database API
-* [ ] Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
-* [ ] For each movie displayed, user can see the following details:
-* [ ] Title, Poster Image, Overview (Portrait mode)
-* [ ] Title, Backdrop Image, Overview (Landscape mode)
-* [ ] Allow user to view details of the movie including ratings and popularity within a separate activity
+* [X] User can **scroll through current movies** from the Movie Database API
+* [X] Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
+*     For each movie displayed, user can see the following details:
+* [X] Title, Poster Image, Overview (Portrait mode)
+* [X] Title, Backdrop Image, Overview (Landscape mode)
+* [X] Allow user to view details of the movie including ratings and popularity within a separate activity
 
 The following **stretch** features are implemented:
 
-* [ ] Improved the user interface by experimenting with styling and coloring.
-* [ ] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
+* [X] Improved the user interface by experimenting with styling and coloring.
+* [X] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
 * [ ] Apply the popular [Butterknife annotation library](http://guides.codepath.org/android/Reducing-View-Boilerplate-with-ViewBinding) to reduce boilerplate code.
 * [ ] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
 
@@ -38,6 +37,8 @@ GIF created with [Kap](https://getkap.co/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+When implementing rounded corners, I had my layout_width hard coded in my view xml file, but the layout_heigt was set to 'wrap_content'. This resulted in the corners not being rounded upon launching the app; the user must scroll in order to start seeing the rounded corners. To fix this, it was necessary to hard code the layout_height to a size that followed the 2:3 aspect ratio specified for the portrait pictures and 16:9 for the landscape pictures. Another fix for this may be possible if I were to have used a ConstraintLayout instead of RelativeLayout, but this needs more investigation to confirm.
 
 ## Open-source libraries used
 
