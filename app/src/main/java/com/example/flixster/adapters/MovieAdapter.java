@@ -81,10 +81,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             // Change imageURL based on screen orientation
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 imageURL = movie.getBackdropPath();
+                Glide.with(context).load(imageURL).placeholder(R.drawable.flicks_backdrop_placeholder).transform(new RoundedCornersTransformation(10, 10)).into(ivPoster);
             } else {
                 imageURL = movie.getPosterPath();
+                Glide.with(context).load(imageURL).placeholder(R.drawable.flicks_movie_placeholder).transform(new RoundedCornersTransformation(10, 10)).into(ivPoster);
             }
-            Glide.with(context).load(imageURL).transform(new RoundedCornersTransformation(10, 10)).into(ivPoster);
         }
 
         // when the user clicks on a row, show MovieDetailsActivity for the selected movie
